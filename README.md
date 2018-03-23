@@ -9,3 +9,16 @@ The detailed information about a template structure is available in [Generamba W
 ### Templates
 - [barItem_viper](barItem_viper/barItem_viper.rambaspec)
 - [controller_viper](controller_viper/controller_viper.rambaspec)
+
+### Instalation
+
+add this to your Rambafile:
+
+```Ruby
+### Templates
+catalogs:
+- 'https://github.com/FinchMoscow/generamba-catalog'
+templates:
+- {name: barItem_viper}
+- {name: controller_viper}
+```
