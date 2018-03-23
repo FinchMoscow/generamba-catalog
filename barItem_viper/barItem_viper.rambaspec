@@ -1,0 +1,29 @@
+# Template information section
+name: "barItem_viper"
+summary: "Swift VIPER module template with UIBarButtonItem playing as a View."
+author: "Maxim Smirnov"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Wireframe layer
+- {name: Wireframe/ItemAssembly.swift, path: Code/Wireframe/assembly.swift.liquid}
+- {name: Wireframe/ItemRouterInput.swift, path: Code/Wireframe/router_input.swift.liquid}
+- {name: Wireframe/ItemRouter.swift, path: Code/Wireframe/router.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/ItemInteractorInput.swift, path: Code/Interactor/interactor_input.swift.liquid}
+- {name: Interactor/ItemInteractor.swift, path: Code/Interactor/interactor.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Outputs/ItemInteractorOutput.swift, path: Code/Presenter/interactor_output.swift.liquid}
+- {name: Presenter/Outputs/ItemRouterOutput.swift, path: Code/Presenter/router_output.swift.liquid}
+- {name: Presenter/Outputs/ItemViewOutput.swift, path: Code/Presenter/view_output.swift.liquid}
+- {name: Presenter/ItemViewModel.swift, path: Code/Presenter/viewModel.swift.liquid}
+- {name: Presenter/ItemPresenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# View layer
+- {name: View/ItemViewInput.swift,  path: Code/View/view_input.swift.liquid}
+- {name: View/BarItemView.swift, path: Code/View/barbuttonitem.swift.liquid}

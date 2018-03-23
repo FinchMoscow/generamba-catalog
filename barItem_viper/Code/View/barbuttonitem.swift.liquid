@@ -1,0 +1,53 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}BarItemView: UIBarButtonItem {
+
+    //MARK: - Properties
+
+    var presenter: {{ module_info.name }}ItemViewOutput? {
+        didSet{
+            presenter?.viewIsReady()
+        }
+    }
+
+
+    //MARK: - LifeCircle
+
+    override init() {
+        super.init()
+        
+        target = self
+        action = #selector(tapIconAction)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+
+    //MARK: - Actions
+    
+    @objc private func tapIconAction() {
+        presenter?.{{ module_info.name | downcase }}ItemDidTapped()
+    }
+
+}
+
+
+// MARK: - {{module_info.name}}ItemViewInput
+extension {{ module_info.name }}BarItemView: {{module_info.name}}ItemViewInput {
+
+    func setup(with viewModel: {{ module_info.name }}ItemViewModel) {
+        
+    }
+
+}

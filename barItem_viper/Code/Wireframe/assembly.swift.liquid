@@ -1,0 +1,29 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+final class {{ module_info.name }}ItemAssembly {
+
+    class func assembleModule() -> UIBarButtonItem {
+        
+        let view = {{ module_info.name }}BarItemView()
+        let presenter = {{ module_info.name }}ItemPresenter()
+        let interactor = {{ module_info.name }}ItemInteractor()
+        let router = {{ module_info.name }}ItemRouter()
+        
+        interactor.presenter = presenter
+        
+        presenter.interactor = interactor
+        presenter.router = router
+        presenter.view = view
+        
+        view.presenter = presenter
+        
+        return view
+    }
+
+}

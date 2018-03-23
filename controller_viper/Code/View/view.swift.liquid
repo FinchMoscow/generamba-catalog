@@ -1,0 +1,50 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}ViewController: UIViewController {
+
+    //MARK: - Public Properties
+
+    var presenter: {{ module_info.name }}ViewOutput?
+
+
+    // MARK: - Private Properties
+
+    private var viewModel: {{ module_info.name }}ViewModel?
+
+
+    //MARK: - LifeCircle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        drawSelf()
+        presenter?.viewIsReady()
+
+    }
+
+
+    // MARK: - Private Methods
+
+    private func drawSelf() {
+
+    }
+
+}
+
+
+// MARK: - {{module_info.name}}ViewInput
+extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput {
+
+    func setup(with viewModel: {{ module_info.name }}ViewModel) {
+        self.viewModel = viewModel
+    }
+
+}

@@ -1,0 +1,43 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+final class {{ module_info.name }}ItemPresenter {
+    
+    // MARK: - Public Properties
+    
+    weak var view: {{ module_info.name }}ItemViewInput?
+    var interactor: {{ module_info.name }}ItemInteractorInput?
+    var router: {{ module_info.name }}ItemRouterInput?
+    
+}
+
+
+// MARK: - {{ module_info.name }}ItemViewOutput
+extension {{ module_info.name }}ItemPresenter: {{ module_info.name }}ItemViewOutput {
+    
+    func viewIsReady() {
+        
+    }
+
+    func {{ module_info.name | downcase }}ItemDidTapped() {
+        
+    }
+    
+}
+
+
+// MARK: - {{ module_info.name }}ItemInteractorOutput
+extension {{ module_info.name }}ItemPresenter: {{ module_info.name }}ItemInteractorOutput {
+    
+}
+
+
+// MARK: - {{ module_info.name }}ItemRouterOutput
+extension {{ module_info.name }}ItemPresenter: {{ module_info.name }}ItemRouterOutput {
+    
+}
