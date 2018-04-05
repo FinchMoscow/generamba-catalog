@@ -10,7 +10,7 @@ import UIKit
 
 final class {{ module_info.name }}BarItemView: UIBarButtonItem {
 
-    //MARK: - Properties
+    // MARK: - Properties
 
     var presenter: {{ module_info.name }}ItemViewOutput? {
         didSet{
@@ -19,7 +19,7 @@ final class {{ module_info.name }}BarItemView: UIBarButtonItem {
     }
 
 
-    //MARK: - LifeCircle
+    // MARK: - LifeCircle
 
     override init() {
         super.init()
@@ -34,7 +34,7 @@ final class {{ module_info.name }}BarItemView: UIBarButtonItem {
     }
     
 
-    //MARK: - Actions
+    // MARK: - Actions
     
     @objc private func tapIconAction() {
         presenter?.{{ module_info.name | downcase }}ItemDidTapped()
